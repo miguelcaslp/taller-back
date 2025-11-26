@@ -1,4 +1,4 @@
-const express = require("express");
+/*const express = require("express");
 const serverless = require("serverless-http");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
@@ -1144,4 +1144,15 @@ app.get("/test", (req, res) => {
 });
 
 
-module.exports = serverless(app)
+module.exports = serverless(app)*/
+
+const express = require("express");
+const serverless = require("serverless-http");
+const app = express();
+
+app.get("/test", (req, res) => {
+  console.log("hola");
+  res.json({ ok: true });
+});
+
+module.exports = serverless(app);
