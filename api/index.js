@@ -1,4 +1,5 @@
 const express = require("express");
+const serverless = require("serverless-http");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const { createClient } = require("@supabase/supabase-js");
@@ -1137,11 +1138,10 @@ app.put("/pieza", verifyToken, async (req, res) => {
 });
 
 
-app.get("/", (req, res) => res.send("Express en Vercel"))
+
+app.get("/test", (req, res) => {
+  res.json({ ok: true });
+});
 
 
-module.exports = app;
-
-/*app.listen(3000, () => {
-  console.log("Servidor corriendo en http://localhost:3000");
-});*/
+module.exports = serverless(app)
