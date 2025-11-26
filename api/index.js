@@ -1147,12 +1147,17 @@ app.get("/test", (req, res) => {
 module.exports = serverless(app)*/
 
 const express = require("express");
-const serverless = require("serverless-http");
 const app = express();
 
 app.get("/test", (req, res) => {
-  console.log("hola");
   res.json({ ok: true });
 });
 
-module.exports = serverless(app);
+app.get("/", (req, res) => {
+  res.json({ ok: true });
+});
+
+
+app.listen(3000, ()=>{
+  console.log("okk")
+});
