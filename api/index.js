@@ -1,4 +1,4 @@
-/*const express = require("express");
+const express = require("express");
 const serverless = require("serverless-http");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
@@ -1140,13 +1140,21 @@ app.put("/pieza", verifyToken, async (req, res) => {
 
 
 app.get("/test", (req, res) => {
-  res.json({ ok: true });
+  res.json({ ok: test });
 });
 
 
-module.exports = serverless(app)*/
+app.get("/", (req, res) => {
+  res.json({ ok: Incio });
+});
 
-const express = require("express");
+app.listen(3000, ()=>{
+  console.log("okk")
+});
+
+
+
+/*const express = require("express");
 const app = express();
 
 app.get("/test", (req, res) => {
@@ -1160,4 +1168,4 @@ app.get("/", (req, res) => {
 
 app.listen(3000, ()=>{
   console.log("okk")
-});
+});*/
