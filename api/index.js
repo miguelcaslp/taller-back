@@ -2,13 +2,13 @@ const express = require("express");
 //const jwt = require("jsonwebtoken");
 //const bcrypt = require("bcryptjs");
 //const { createClient } = require("@supabase/supabase-js");
-const cors = require('cors');
+//const cors = require('cors');
 //require("dotenv").config();
 
 const app = express();
 app.use(express.json());
 
-const corsOptions = {
+/*const corsOptions = {
   origin: "*",
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"]
@@ -16,7 +16,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-/*
+
 
 // Clave secreta para firmar el JWT (idealmente poner en .env)
 const SECRET_KEY = process.env.SECRET_KEY;
