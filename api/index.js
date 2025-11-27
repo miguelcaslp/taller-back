@@ -1,5 +1,4 @@
 const express = require("express");
-const serverless = require("serverless-http");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const { createClient } = require("@supabase/supabase-js");
@@ -17,7 +16,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-
+/*
 
 // Clave secreta para firmar el JWT (idealmente poner en .env)
 const SECRET_KEY = process.env.SECRET_KEY;
@@ -1137,6 +1136,7 @@ app.put("/pieza", verifyToken, async (req, res) => {
   }
 });
 
+*/
 
 
 app.get("/test", (req, res) => {
