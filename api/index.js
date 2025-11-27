@@ -17,6 +17,15 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
+// Clave secreta para firmar el JWT (idealmente poner en .env)
+const SECRET_KEY = process.env.SECRET_KEY;
+
+// Conectar con Supabase
+const supabase = createClient(
+  process.env.SUPABASE_URL,
+  process.env.SUPABASE_KEY
+);
+
 
 app.get("/test", (req, res) => {
   res.json({ ok: "test" });
