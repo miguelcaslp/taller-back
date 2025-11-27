@@ -1,9 +1,9 @@
 const express = require("express");
-const jwt = require("jsonwebtoken");
-const bcrypt = require("bcryptjs");
-const { createClient } = require("@supabase/supabase-js");
+//const jwt = require("jsonwebtoken");
+//const bcrypt = require("bcryptjs");
+//const { createClient } = require("@supabase/supabase-js");
 const cors = require('cors');
-require("dotenv").config();
+//require("dotenv").config();
 
 const app = express();
 app.use(express.json());
