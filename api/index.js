@@ -693,9 +693,8 @@ app.get("/reparaciones/:id", verifyToken, async (req, res) => {
         DNI: cliente?.DNI || null,
         Car_Plate: vehiculo?.Car_Plate || null
       });
-
-      res.json({ reparaciones });
     }
+     res.json({ reparaciones });
 
 
   } catch (err) {
